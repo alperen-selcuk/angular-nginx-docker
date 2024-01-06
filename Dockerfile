@@ -14,7 +14,7 @@ RUN npm run build
 # Stage 2: Run
 FROM nginx:alpine
 
-COPY --from=build /app/dist/ /usr/share/nginx/html
+COPY --from=build /app/dist/angular-docker /usr/share/nginx/html
 
 EXPOSE 80
 
